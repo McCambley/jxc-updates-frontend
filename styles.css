@@ -17,6 +17,12 @@ body {
   padding-bottom: 1rem;
 }
 
+.main__loading {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 1rem;
+}
+
 .main__image {
   position: absolute;
   top: 50%;

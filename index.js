@@ -1,8 +1,9 @@
+const url = "https://jxc-updates.onrender.com";
 async function getSkiReport() {
   const reportEl = document.querySelector(".main__text");
   reportEl.textContent = "Loading Report...";
   try {
-    const response = await fetch("http://localhost:3000/ski-report");
+    const response = await fetch(`${url}/ski-report`);
     const { data } = await response.json();
     const paragraphs = data.split("\n\n");
     reportEl.innerHTML = "";

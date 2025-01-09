@@ -1,0 +1,40 @@
+body {
+  background-color: #191c24;
+  color: #f5f6f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 100vh;
+  position: relative;
+  font-family: "Roboto Slab", serif;
+}
+
+.main__image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: -1;
+  filter: grayscale(100%);
+  filter: brightness(50);
+  opacity: 0.05;
+  min-width: 75%;
+}
+
+.main__text {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.main__text p {
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 0.5rem;
+  max-width: 50ch;
+}

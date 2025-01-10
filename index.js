@@ -1,5 +1,5 @@
 const url = "https://jxc-updates.onrender.com";
-// const url = "https://localhost:3000";
+// const url = "http://localhost:3000";
 async function getSkiReport() {
   const reportEl = document.querySelector(".main__text");
   try {

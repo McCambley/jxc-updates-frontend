@@ -1,4 +1,5 @@
 const url = "https://jxc-updates.onrender.com";
+// const url = "https://localhost:3000";
 async function getSkiReport() {
   const reportEl = document.querySelector(".main__text");
   try {
@@ -12,8 +13,11 @@ async function getSkiReport() {
       reportEl.appendChild(el);
     });
   } catch (error) {
-    reportEl.textContent =
+    reportEl.innerHTML = "";
+    const el = document.createElement("p");
+    el.textContent =
       "Oh no! Looks like we had some trouble fetching the report. Please try again later!";
+    reportEl.appendChild(el);
     console.error(error);
   }
 }

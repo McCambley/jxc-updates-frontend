@@ -1,3 +1,13 @@
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+    /* opacity: 0; */
+  }
+  100% {
+    transform: rotate(180deg);
+    /* opacity: 1; */
+  }
+}
 body {
   background-color: #191c24;
   color: #f5f6f4;
@@ -10,11 +20,18 @@ body {
   font-family: "Roboto Slab", serif;
   flex-direction: column;
   padding: 1rem;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
 }
 
 .main__divider {
   margin: 0;
   padding-bottom: 1rem;
+}
+
+.main__divider p {
+  margin: 0;
+  animation: rotate 3s infinite linear;
 }
 
 .main__loading {

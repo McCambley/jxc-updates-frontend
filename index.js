@@ -2,11 +2,13 @@ const url = "https://jxc-updates.onrender.com";
 // const url = "http://localhost:3000";
 async function getSkiReport() {
   const reportEl = document.querySelector(".main__text");
+  const body = document.querySelector("body");
   try {
     const response = await fetch(`${url}/ski-report`);
     const { data } = await response.json();
     const paragraphs = data.split("\n\n");
     reportEl.innerHTML = "";
+    body.style.padding = "1rem";
     paragraphs.forEach((p) => {
       const el = document.createElement("p");
       el.textContent = p;

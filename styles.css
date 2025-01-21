@@ -121,7 +121,7 @@ body {
   width: 0%;
   height: 0.5rem;
   border-radius: 50px;
-  animation: loading-bar 30s ease forwards;
+  animation: loading-bar 60s linear forwards;
   background-color: #f5f6f4;
 }
 

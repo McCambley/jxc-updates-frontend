@@ -6,6 +6,8 @@ function sleep(ms) {
 
 async function getSkiReport() {
   const reportEl = document.querySelector(".main__text");
+  const mainDividerEl = document.querySelector(".main__divider");
+  const mainLinkEl = document.querySelector(".main__link");
   const body = document.querySelector("body");
   const loadingWrapper = document.querySelector(".main__loading-wrapper");
   const loadingBar = document.querySelector(".main__loading-bar");
@@ -22,6 +24,8 @@ async function getSkiReport() {
       el.textContent = p;
       reportEl.appendChild(el);
       loadingWrapper.remove();
+      mainDividerEl.style.display = "block";
+      mainLinkEl.style.display = "block";
     });
   } catch (error) {
     loadingWrapper.remove();
@@ -30,6 +34,8 @@ async function getSkiReport() {
     el.textContent =
       "Oh no! Looks like we had some trouble fetching the report. Please try again later!";
     reportEl.appendChild(el);
+    mainDividerEl.style.display = "block";
+    mainLinkEl.style.display = "block";
     console.error(error);
   }
 }
